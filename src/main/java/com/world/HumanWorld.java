@@ -1,8 +1,12 @@
 package com.world;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 	public class HumanWorld extends Humans {
 
@@ -37,10 +41,22 @@ import java.util.Scanner;
 				} 
 
 			}
-
+    Set<Humans> set = new HashSet<Humans>(humanList);
+			
+        	System.out.println(set);
+        	
+        	Map<Integer, Humans> map = new HashMap<Integer,Humans >();
+        	int i = 1;
+        	for(Humans x:set) {
+        		map.put(i, x);
+        		i++;
+        	}
+        	System.out.println(map);
+		}
+	
 //			System.out.println(humanList);
 		}
-	}
+	
 
 
 
